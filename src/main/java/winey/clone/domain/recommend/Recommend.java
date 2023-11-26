@@ -1,9 +1,10 @@
 package winey.clone.domain.recommend;
 
 import jakarta.persistence.*;
+import winey.clone.domain.date.BaseTimeLog;
 
 @Entity
-public class Recommend {
+public class Recommend extends BaseTimeLog {
 
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "recommend_id")

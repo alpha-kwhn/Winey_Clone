@@ -1,11 +1,12 @@
 package winey.clone.domain.feedLike;
 
 import jakarta.persistence.*;
+import winey.clone.domain.date.BaseTimeLog;
 import winey.clone.domain.feed.Feed;
 import winey.clone.domain.user.User;
 
 @Entity
-public class FeedLike {
+public class FeedLike extends BaseTimeLog {
 
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "feed_like_id")

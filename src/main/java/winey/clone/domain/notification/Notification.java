@@ -1,10 +1,11 @@
 package winey.clone.domain.notification;
 
 import jakarta.persistence.*;
+import winey.clone.domain.date.BaseTimeLog;
 import winey.clone.domain.user.User;
 
 @Entity
-public class Notification {
+public class Notification extends BaseTimeLog {
 
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "noti_id")

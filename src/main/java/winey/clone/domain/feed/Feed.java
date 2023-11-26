@@ -1,17 +1,16 @@
 package winey.clone.domain.feed;
 
 import jakarta.persistence.*;
-import org.springframework.boot.autoconfigure.web.WebProperties;
+import winey.clone.domain.date.BaseTimeLog;
 import winey.clone.domain.comment.Comment;
 import winey.clone.domain.feedLike.FeedLike;
 import winey.clone.domain.goal.Goal;
 import winey.clone.domain.user.User;
 
-import java.util.ArrayList;
 import java.util.List;
 
 @Entity
-public class Feed {
+public class Feed extends BaseTimeLog {
 
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "feed_id")

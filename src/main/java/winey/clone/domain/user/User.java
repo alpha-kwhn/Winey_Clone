@@ -1,17 +1,17 @@
 package winey.clone.domain.user;
 
 import jakarta.persistence.*;
+import winey.clone.domain.date.BaseTimeLog;
 import winey.clone.domain.comment.Comment;
 import winey.clone.domain.feed.Feed;
 import winey.clone.domain.feedLike.FeedLike;
 import winey.clone.domain.goal.Goal;
 import winey.clone.domain.notification.Notification;
 
-import java.util.ArrayList;
 import java.util.List;
 
 @Entity
-public class User {
+public class User extends BaseTimeLog {
 
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "user_id")

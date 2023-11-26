@@ -1,11 +1,12 @@
 package winey.clone.domain.comment;
 
 import jakarta.persistence.*;
+import winey.clone.domain.date.BaseTimeLog;
 import winey.clone.domain.feed.Feed;
 import winey.clone.domain.user.User;
 
 @Entity
-public class Comment {
+public class Comment extends BaseTimeLog {
 
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "comment_id")
